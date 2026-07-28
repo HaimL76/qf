@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{graphicx} % Required for inserting images
+\DeclareMathOperator{\tr}{tr}
+\title{qf}
+\author{haiml76 }
+\date{July 2026}
+
+\begin{document}
+
+\maketitle
+
+\section*{9.2}
+\subsection*{1}
+\subsubsection*{a}
+Since $\rho$ is a ring homomorphism, then $\rho(1)=I$, hence for every $\lambda\in{F}$, the image of $\lambda$ is  a scalar matrix, 
+$\rho(\lambda)=\lambda{I}$.\\ Thus, for every $x=\lambda+\beta\in{K}$, where $\lambda\in{F}$ and $\beta\notin{F}$, $\rho(\lambda+\beta)=\lambda{I}+\rho(\beta)$, where $\rho(\beta)$ has zeros on the main diagonal, which implies that $\tr(\rho(x))=\tr(\rho(\lambda))$ for every $\rho$.
+\subsubsection*{b}
+
+
+
+Let $A$ be a symmetric matrix. We show that $A$ can be diagonalized through a finite sequence of elementary operations s.t. for each row operation on row $i$ we perform the same operation on column $i$.\\
+Let $B=\begin{pmatrix}
+a&b\\
+b&d\\
+\end{pmatrix},$
+then the operations $R_1\leftarrow{d}R_1-bR_2$ and $C_1\leftarrow{d}C_1-bC_2$ turn $B$ to $D=EBE^t=\begin{pmatrix}
+-(b^2-ad)d &0\\
+0&b^2d\\
+\end{pmatrix},$
+where $E=\begin{pmatrix}
+d&-b\\
+0&b\\
+\end{pmatrix}$
+is a product of elementary operation matrices, thus $B=E_1DE_1^t$, where $E_1=E^{-1}$.\\
+For $n>2$, let $B=(b_{ij})$ be an $n\times{n}$ symmetric matrix, by the assumption we can diagonalize the $(n-1)\times(n-1)$ matrix of the first $n-1$ rows and columns, denote it $E_1BE_1^t$. For row $n$, if $b_{nn}\neq{0}$ and $b_{n1},b_{n2},\dots,b_{n,n-1}=0$, then we are finished, otherwise we multiply $E_1BE_1^t$ by (a product of) a finite number of elementary matrices $E_2$, operating only on row $n$ and column $n$, thus not affecting the already diagonalized part of $E_1BE_1^t$, turning it to the diagonal matrix $E_2(E_1BE_1^t)E_2^t=(E_2E_1)B(E_2E_1)^t$.
+\end{document}
