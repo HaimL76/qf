@@ -33,5 +33,13 @@ d&-b\\
 0&b\\
 \end{pmatrix}$
 is a product of elementary operation matrices, thus $B=E_1DE_1^t$, where $E_1=E^{-1}$.\\
-For $n>2$, let $B=(b_{ij})$ be an $n\times{n}$ symmetric matrix, by the assumption we can diagonalize the $(n-1)\times(n-1)$ matrix of the first $n-1$ rows and columns, denote it $E_1BE_1^t$. For row $n$, if $b_{nn}\neq{0}$ and $b_{n1},b_{n2},\dots,b_{n,n-1}=0$, then we are finished, otherwise we multiply $E_1BE_1^t$ by (a product of) a finite number of elementary matrices $E_2$, operating only on row $n$ and column $n$, thus not affecting the already diagonalized part of $E_1BE_1^t$, turning it to the diagonal matrix $E_2(E_1BE_1^t)E_2^t=(E_2E_1)B(E_2E_1)^t$.
+For $n>2$, let $B=(b_{ij})$ be an $n\times{n}$ symmetric matrix, by the assumption we can diagonalize the $(n-1)\times(n-1)$ matrix of the first $n-1$ rows and columns, denote it $E_1BE_1^t$. For row $n$, if $b_{nn}\neq{0}$ and $b_{n1},b_{n2},\dots,b_{n,n-1}=0$, then we are finished, otherwise we multiply $E_1BE_1^t$ by (a product of) a finite number of elementary matrices $E_2$, operating only on row $n$ and column $n$, thus not affecting the already diagonalized part of $E_1BE_1^t$, turning it to the diagonal matrix $E_2(E_1BE_1^t)E_2^t=(E_2E_1)B(E_2E_1)^t$, which proves the induction.
+\section*{aaa}
+Let $(V,b)$ be a vector space with a bilinear form.\\
+We define the left radical, $V^{\perp}_L:=\{v\in{V} : b(v,u)=0,\forall{u}\in{V}\}$, and the right radical, $V^{\perp}_R:=\{v\in{V} : b(u,v)=0,\forall{u}\in{V}\}$, they are subspaces of $V$, because if $v,v'\in{V}^{\perp}_L$, then $b(\alpha{v}+v',u)=\alpha{b}(v,u)+b(v',u)=\alpha0+0=0$.\\
+Proposition: Let $(V,b)$ be a subspace with a non-symmetric bilinear form, then $V_L^{\perp}=0\iff{V}_R^{\perp}=0\iff\det{B}\neq{0}$, where $B$ is the matrix of $b$.\\
+Proof: Denote by $b_{ij}$ the $(i,j)$ element of $B$.\\
+Let $\{u_1,u_2,\dots,u_n\}$ be a basis of $V$, and let $v\in{V_L^{\perp}}$ be a vector in the left radical of $V$, in particular $b(v,u_i)=0$ for all $1\leq{i}\leq{n}$.
+But $v=\sum_{j=1}^n\alpha_ju_j$, for some $\alpha_1,\alpha_2,\dots,\alpha_n\in{K}$, hence \[b(v,u_i)=b(\sum_{j=1}^n\alpha_ju_j,u_i)=\sum_{j=1}^n\alpha_jb(u_j,u_i)=\sum_{j=1}^n\alpha_jb_{ij}=0,\]
+which applies for all $1\leq{i}\leq{n}$, that is, $v$ is a solution to the system of equations $\{\sum_{j=1}^n\alpha_jb_{ij}=0\}_{i=1}^n$, but $V_L^{\perp}=0$ iff the only solution to this system is the trivial solution $v=0$ iff $\det{B}\neq0$, and constructing the same system of equations (in the right direction) for $V_R^{\perp}$ yields the same result ($V_R^{\perp}=0\iff\det{B}\neq0$).
 \end{document}
