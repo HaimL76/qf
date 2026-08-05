@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsthm}
+\usepackage{amssymb}
+\newtheorem{theorem}{Theorem}
+
+\title{Strong Hasse Principle}
+\author{Haim Lavi, 038712105}
+\date{August 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{theorem}
+Let $(V,q)$ be a quadratic space, then $V$ is isotropic as a vector space over $\mathbb{Q}$ if and only if $V$ is isotropic as a vector space over $\mathbb{R}$ and over $\mathbb{Q}_p$ for every prime $p$.\\
+In other words, if $\dim{V}=n$, then $q(v)=0$ has a nontrivial solution in $\mathbb{Q}^n$ if and only if it has a nontrivial solution in $\mathbb{R}^n$ and in $\mathbb{Q}_p^n$ for every prime $p$.
+\end{theorem}
+\begin{proof}
+The only if direction is trivial, since $\mathbb{Q}\subset\mathbb{R}$ and $\mathbb{Q}\subset\mathbb{Q}_p$ for every prime $p$ (the image of every $r\in\mathbb{Q}$ in the completion field is the equivalence class of the constant Cauchy sequence $r,r,\dots,r,\dots$), but the if direction is complicated and requires separate proofs for several cases of $n=\dim{V}$.\\
+\section*{$n=2$}
+Consider the form $q=a_1x_1^2+a_2x_2^2$, and assume that $a_1=1$ (otherwise divide $q$ by $a_1$, which does not change the solutions to $q(v)=0$).\\
+If $x_1,x_2\in\mathbb{R}$, then $q(v)=x_1^2+a_2x_2^2=0\iff{a_2=-(\frac{x_1}{x_2}})^2$, thus $-a_2>0$ (because it is a square in $\mathbb{R}$), so we can reformat $q$ as $q=x_1^2-a_2x_2^2$, where $a_2>0$.\\
+For every prime, $q(v)=0\iff{a_2=(\frac{x_1}{x_2})^2}$, thus $a_2$ is a square in $\mathbb{Q}_p$, but then $v_p(a_2)=v_p(r^2)=2v_p(r)$, where $r=\sqrt{a_2}$.\\ But $a_2=\prod_pp^{v_p(a_2)}=\prod_pp^{2v_p(r)}=\prod_p(p^{v_p(r)})^2$, thus $a_2$ is a square in $\mathbb{Q}$.
+\end{proof}
+\end{document}
