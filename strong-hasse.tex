@@ -46,5 +46,9 @@ Now we map in the opposite way $(v_1,v_2,v_3)\mapsto(-a_2v_2+zv_1,zv_2-v_1,wv_3)
 then $|w|_{p_i}=|\frac{z^2-a_2}{a_3}|_{p_i}\leq|\frac{z^2}{a_3}|_{p_i}+|\frac{a_2}{a_3}|_{p_i}$, but we assumed that\\ $|z|_{p_i}\leq\frac{|a_3|_{p_i}}{2}$ and that $|a_2|_{p_i}\leq|a_3|_{p_i}$, hence $|\frac{z^2}{a_3}|_{p_i}+|\frac{a_2}{a_3}|_{p_i}\leq|\frac{1}{a_3}(\frac{a_3}{2})^2|_{p_i}+1=\frac{|a_3|_{p_i}}{4}+1$, but for any $a_3\geq2$, the inequality $\frac{|a_3|_{p_i}}{4}+1\leq|a_3|_{p_i}$ holds, thus $|w|_{p_i}\leq|a_3|_{p_i}$. 
 
 But we assumed that there are rational solutions for every $m'<m=|a|+|b|$, that is, there are rational solutions for $x_1^2-a_2x_2^2-wx_3^2=0$, because $|a|+|w|<|a|+|b|=m$, thus, by the bijection above there exist rational solutions for $x_1^2-a_2x_2^2-a_3x_3^2=0$, which proves the induction.
+
+\section*{$n=4$}
+We have $q=a_1x_1^2+a_2x_2^2-a_3x_3^2-a_4x_4^2=a_1x_1^2+a_2x_2^2-(a_3x_3^2+a_4x_4^2)$, but if $q(v)=0$ in $\mathbb{Q}_p$ for every prime $p$, then there exists $a\in\mathbb{Q}_p$ such that $a_1x_1^2+a_2x_2^2=a$ and $a_3x_3^2+a_4x_4^2=a$.\\
+consider the equation $ay^2-a_1x_1^2+a_2x_2^2=0$, but $a_1x_1^2+a_2x_2^2=x$ for some $(v_1,v_2)\in\mathbb{Q}_p^2\implies{a}y^2-a=a(y^2-1)=0$ for $(v_1,v_2,1)\in\mathbb{Q}_p^3$, but this applies for every prime $p$, thus it applies also for $\mathbb{Q}_p$ itself, as we already observed for $n=3$, that is $ay^2-a_1x_1^2-a_2x_2=0$ has a nontrivial solution in $\mathbb{Q}^3$, thus $a_1x_1^2+a_2x_2^2=a$ in $\mathbb{Q}$, and the same exactly applies for $a_3x_3^2+a_4x_4^2=a$ in $\mathbb{Q}$, but then $a_1x_1^2+a_2x_2^2-(a_3x_3^2+a_4x_4^2)=0$ has a nontrivial solution in $\mathbb{Q}$.
 \end{proof}
 \end{document}
