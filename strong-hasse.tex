@@ -48,7 +48,14 @@ then $|w|_{p_i}=|\frac{z^2-a_2}{a_3}|_{p_i}\leq|\frac{z^2}{a_3}|_{p_i}+|\frac{a_
 But we assumed that there are rational solutions for every $m'<m=|a|+|b|$, that is, there are rational solutions for $x_1^2-a_2x_2^2-wx_3^2=0$, because $|a|+|w|<|a|+|b|=m$, thus, by the bijection above there exist rational solutions for $x_1^2-a_2x_2^2-a_3x_3^2=0$, which proves the induction.
 
 \section*{$n=4$}
-We have $q=a_1x_1^2+a_2x_2^2-a_3x_3^2-a_4x_4^2=a_1x_1^2+a_2x_2^2-(a_3x_3^2+a_4x_4^2)$, but if $q(v)=0$ in $\mathbb{Q}_p$ for every prime $p$, then there exists $a\in\mathbb{Q}_p$ such that $a_1x_1^2+a_2x_2^2=a$ and $a_3x_3^2+a_4x_4^2=a$.\\
+We have $q=a_1x_1^2+a_2x_2^2-a_3x_3^2-a_4x_4^2=a_1x_1^2+a_2x_2^2-(a_3x_3^2+a_4x_4^2)$, we have the following claim:\\
+
+Let $q(v)=0$ in $\mathbb{Q}_p$ for every prime $p$, then there exists $a\in\mathbb{Q}_p$ such that $a_1x_1^2+a_2x_2^2=a$ and $a_3x_3^2+a_4x_4^2=a$.\begin{proof}
+The proof is based on a set of corollaries of the basic lemma that every nontrivial isotropic subspace is the orthogonal sum $V=\mathbb{H}^m\perp{U}$, where $U$ is anisotropic and $m=2k$.\\
+Consider a quadratic form $q$, where $n=\dim{q}$ is odd, if there exists some $u\in{V}$ such that $q(u)=a$ for some scalar $a\in{K}$, then let $U=Ku<V$ a one-dimensional subspace of $V$, and we construct a subspace $H<V$ by taking a complement to $U$, but then we take the quadratic form  $h=\langle1,-1,1,-1,\dots,1,-1\rangle$ on the $n-1$ basis elements of $H$, thus taking $(1,1,\dots,1)\in{K}^{n-1}$ yields zero, hence the quadratic form $q'=\langle1,-1,\dots,1,-1,a\rangle=h\perp{a}x_{n}^2$ yields $a$ for $(1,1,\dots,1,1)\in{K}^n$, and clearly the quadratic form $q''=q-ax_{n+1}^2$ yields zero for $(1,1,\dots,1,1,1)\in{K}^{n+1}$.\\
+Suppose that we start from $q''$ and assume that there exists a $u$ such that $q''(u)=0$, then either $u=(u_1,u_2,\dots,u_n,0)$ such that $q(u_1,u_2,\dots,u_n)=0$, or $u=(u_1,u_2,\dots,u_n,1)$ such that $q(u_1,u_2,\dots,u_n)=a$, thus we get a circular reasoning:\\ $a$ is a value of $q$ $\implies$ $q\sim{h}\perp\langle{a}\rangle$ $\implies$ zero is a value of $q-ax_{n}^2$ $\implies$ $a$ is a value of $q$.
+\end{proof}
+
 consider the equation $ay^2-a_1x_1^2+a_2x_2^2=0$, but $a_1x_1^2+a_2x_2^2=x$ for some $(v_1,v_2)\in\mathbb{Q}_p^2\implies{a}y^2-a=a(y^2-1)=0$ for $(v_1,v_2,1)\in\mathbb{Q}_p^3$, but this applies for every prime $p$, thus it applies also for $\mathbb{Q}_p$ itself, as we already observed for $n=3$, that is $ay^2-a_1x_1^2-a_2x_2=0$ has a nontrivial solution in $\mathbb{Q}^3$, thus $a_1x_1^2+a_2x_2^2=a$ in $\mathbb{Q}$, and the same exactly applies for $a_3x_3^2+a_4x_4^2=a$ in $\mathbb{Q}$, but then $a_1x_1^2+a_2x_2^2-(a_3x_3^2+a_4x_4^2)=0$ has a nontrivial solution in $\mathbb{Q}$.
 \end{proof}
 \end{document}
