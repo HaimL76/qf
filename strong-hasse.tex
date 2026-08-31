@@ -40,13 +40,9 @@ and since $a_2$ is a square modulo $p_i$ for every $1\leq{i}\leq{k}$, then $a_2$
 We can choose $z$ such that $|z|\leq\frac{|a_3|}{2}$.
 We rearrange the equation above to $z^2-a_2=a_3y$, but then $a_3y$ is the norm on the field extension $K[\sqrt{a_2}]$ where $K=\mathbb{Q}$ or $K=\mathbb{Q}_p$.\\
 If $y=0\iff{z}^2=a_2$, that is $a_2$ is a square (not merely a square modulo $a_3$), then any vector of the form $(v_1,\frac{v_1}{z},0)\in\mathbb{Q}^3$ is a solution of $q(v)$, because $v_1^2-z^2(\frac{v_1}{z})^2-a_30^2=0$.\\
-Otherwise, if $y\neq0$, then $|y|=|\frac{z^2-a_2}{a_3}|\leq|\frac{z^2}{a_3}|+|\frac{a_2}{a_3}|$, but we assumed that\\ $|z|\leq\frac{|a_3|}{2}$ and that $|a_2|\leq|a_3|$, hence $|y|\leq|\frac{z^2}{a_3}|+|\frac{a_2}{a_3}|\leq|\frac{1}{a_3}(\frac{a_3}{2})^2|+1=\frac{|a_3|}{4}+1$, but for any $a_3\geq2$, the inequality $\frac{|a_3|}{4}+1\leq|a_3|$ holds, thus $|y|\leq|a_3|$. \\
+Otherwise, if $y\neq0$, then $|y|=|\frac{z^2-a_2}{a_3}|\leq|\frac{z^2}{a_3}|+|\frac{a_2}{a_3}|$, but we assumed that\\ $|z|\leq\frac{|a_3|}{2}$ and that $|a_2|\leq|a_3|$, hence $|y|\leq|\frac{z^2}{a_3}|+|\frac{a_2}{a_3}|\leq|\frac{1}{a_3}(\frac{a_3}{2})^2|+1=\frac{|a_3|}{4}+1$, we observe that for every $|a_3|\geq2$, we have that $|y|\leq\frac{|a_3|}{4}+1<|a_3|$. \\
 Now we claim the following:\\
-There is a bijection between the set of rational solutions of $x_1^2-a_2x^2-a_3x_3^2=0$ and that of $x_1^2-a_2x_2^2-yx_3^2=0$.
-
-
-
-But we assumed that there are rational solutions for every $m'<m=|a|+|b|$, that is, there are rational solutions for $x_1^2-a_2x_2^2-wx_3^2=0$, because $|a|+|w|<|a|+|b|=m$, thus, by the bijection above there exist rational solutions for $x_1^2-a_2x_2^2-a_3x_3^2=0$, which proves the induction.
+There exists a bijection between the set of rational solutions of $x_1^2-a_2x^2-a_3x_3^2=0$ and that of $x_1^2-a_2x_2^2-yx_3^2=0$ (a full proof is given later in this document), but then $m'=|a_2|+|y|<|a_2|+|a_3|=m$, and we assumed that for every $m'<m$ there exist rational solutions to the equation $w=x_1^2-a_2x_2^2-yx_3^2=0$, thus by the bijection above there exist rational solutions for $q=x_1^2-a_2x_2^2-a_3x_3^2=0$, which proves the induction step for $m$.
 
 \section*{$n=4$}
 We have $q=a_1x_1^2+a_2x_2^2-a_3x_3^2-a_4x_4^2=a_1x_1^2+a_2x_2^2-(a_3x_3^2+a_4x_4^2)$, we have the following claim:\\
@@ -72,6 +68,7 @@ We use the theorem that $a\in\mathbb{Q}_p^{\ast^2}$ if and only if $a=p^nu$, whe
 due to approximation theorem, there exists $(u_1',u_2')\in\mathbb{Q}^2$ such that if $q_2((u_3',\dots,u_n'))=a'\in\mathbb{Q}$, then $\frac{a'}{a}\in\mathbb{Q}_p^{\ast^2}$. But then the quadratic form $q_2'=ax_{n+1}^2-q_2$ has that $q((u_3,\dots,u_n,1))=a-a=0$, but $q_2'$ is of dimension $n-1$ ($q_2$ is of dimension $n-2$ and we add $x_{n+1}$), hence by the assumption it has a zero in $\mathbb{Q}$, therefore it has also the value $a$ in $\mathbb{Q}$, thus $q=q_1-q_2$ has the value $a-a=0$ in $\mathbb{Q}$, which concludes  the proof for all $n>4$, and so we get this result for every $n>1$.
 \end{proof}
 \end{proof}
+\label{bijection}
 Proposition: Let $a_2,a_3,y,z$, such that $z^2-a_2=a_3y$, then
 for the following two equations
 \begin{equation}
@@ -84,7 +81,7 @@ we have a bijection $f:\mathbb{Q}^3\rightarrow\mathbb{Q}^3$, such that $q(v)=0\i
 \begin{proof}
 Let $v=(v_1,v_2,v_3)$ be a solution of  equation $1$, then we define a map \\$f:\mathbb{Q}^3\rightarrow\mathbb{Q}^3$
 by $(v_1,v_2,v_3)\overset{f}{\mapsto}(a_2v_2+zv_1,zv_2+v_1,a_3v_3)$, and we check that $w(f(v))=(f(x_1))^2-a_2(f(x_2))^2-y(f(x_3))^2=(a_2v_2+zv_1)^2-a_2(zv_2+v_1)^2-y(a_3v_3)^2=a_2^2v_2^2+2a_2v_2zv_1+z^2v_1^2-a_2z^2v_2^2-2a_2zv_2v_1-a_2v_1^2-ya_3^2v_3^2=(z^2-a_2)v_1^2-(z^2-a_2)a_2v_2^2-(ya_3)a_3v_3^2$, but $z^2-a_2=ya_3$, thus we get that $w(f(v))=ya_3(v_1^2-a_2v_2^2-a_3v_3^2)=ya_3q(v)=0$.\\
-Now we define a map $g:\mathbb{Q}^3\rightarrow\mathbb{Q}^3$ by $(v_1,v_2,v_3)\overset{g}{\mapsto}(-a_2v_2+zv_1,zv_2-v_1,yv_3)$, and we calculate $(g\circ{f})(v)=g((a_2v_2+zv_1,zv_2+v_1,a_3v_3))=(-a_2(zv_2+v_1)+z(a_2v_2+zv_1),z(zv_2+v_1)-(a_2v_2+zv_1),y(a_3v_3))=(-a_2zv_2-a_2v_1+za_2v_2+z^2v_1,z^2v_2+zv_1-a_2v_2-zv_1,(ya_3)v_3)=((z^2-a_2)v_1,(z^2-a_2)v_2,(ya_3)v_3)=ya_3(v_1,v_2,v_3)$, which shows that $g\circ{f}(v)=ya_3$ (that is, $g\circ{f}(v)$ is the same solution of $q$ multiplied by a scalar).\\
+Now we define a map $g:\mathbb{Q}^3\rightarrow\mathbb{Q}^3$ by $(v_1,v_2,v_3)\overset{g}{\mapsto}(-a_2v_2+zv_1,zv_2-v_1,yv_3)$, and we calculate $(g\circ{f})(v)=g((a_2v_2+zv_1,zv_2+v_1,a_3v_3))=(-a_2(zv_2+v_1)+z(a_2v_2+zv_1),z(zv_2+v_1)-(a_2v_2+zv_1),y(a_3v_3))=(-a_2zv_2-a_2v_1+za_2v_2+z^2v_1,z^2v_2+zv_1-a_2v_2-zv_1,(ya_3)v_3)=((z^2-a_2)v_1,(z^2-a_2)v_2,(ya_3)v_3)=ya_3(v_1,v_2,v_3)$, which shows that $(g\circ{f})(v)=ya_3$ (that is, $(g\circ{f})(v)$ is the same solution $v$ of $q$ multiplied by a scalar).\\
 \end{proof}
 
 Proposition: Let $a\in\mathbb{Z}_p$ then $a$ is invertible in $\mathbb{Z}_p$ if and only if $v_p(a)=1$.
