@@ -24,10 +24,10 @@ The only if direction is trivial, since $\mathbb{Q}\subset\mathbb{R}$ and $\math
 Consider the quadratic form $q=a_1x_1^2+a_2x_2^2$, and assume that $a_1=1$ (this will be the assumption throughout this proof)\footnote{otherwise divide $q$ by $a_1$, then any solution of $q$ is also a solution of $\frac{1}{a_1}q$}.\\
 If $v=(v_1,v_2)\in\mathbb{R}^2$ is a solution of $q$, then $q(v)=v_1^2+a_2v_2^2=0\iff{a_2=-(\frac{v_1}{v_2}})^2$, thus $-a_2>0$ (because it is a square in $\mathbb{R}$), so we can reformat $q$ as $q=x_1^2-a_2x_2^2$, where $a_2>0$.\\
 \newline
-There exists also a solution $v\in\mathbb{Q}_{p_i}^2$, for every prime $p_i$, hence $a_2=(\frac{v_1}{v_2})^2$ is a square in $\mathbb{Q}_p$, but, denote $r=\frac{v_1}{v_2}$, $a_2$ can be factored as \[
-a_2=p_i^{v_{p_i}(a_2)}\prod_{p\neq{p_i}}p^{v_p(a_2)}=\prod_pp^{v_p(a_2)}=\prod_pp^{v_p(r^2)}=\prod_pp^{2v_p(r)}=\prod_p\left(p^{v_p(r)}\right)^2,
+There exists also a solution $v\in\mathbb{Q}_p^2$, for every prime $p$, hence $a_2=(\frac{v_1}{v_2})^2$ is a square in $\mathbb{Q}_p$, but, denote $r=\frac{v_1}{v_2}$, $a_2$ can be factored as \[
+a_2=\prod_pp^{v_p(a_2)}=\prod_pp^{v_p(r^2)}=\prod_pp^{2v_p(r)}=\prod_p\left(p^{v_p(r)}\right)^2,
 \]
-which means that $a_2$ is a squared integer (product of squared primes).
+which means that $a_2$ is a product of squared integers, hence $a_2=a_2'^2$, for some integer $a_2'\in\mathbb{Z}$, that is $q(v)=v_1^2-a_2'^2(\frac{v_1}{v_2})^2=v_1^2-(a_2'\frac{v_1}{v_2})^2=0$, thus $v'=(v_1,a_2'\frac{v_1}{v_2})\in\mathbb{Q}_p$ is a rational solution for $q$.
 \section*{$n=3$}
 Here $q=x_1^2+a_2x_2^2+a_3x_3^2$.\\
 We establish first that $a_2$ and $a_3$ are square free integers, otherwise, suppose that $a_2$ is not square free, that is $a_2=bc$, where $b$ is square free (can be $1$) and $c=\pm{p}_1^2p_2^2\cdots{p}_k^2$ for $k$ distinct primes, but then the quadratic equation $q'=x_1^2-bx_2'^2-a_3x_3^2$, where $x_2'=cx_2$, has a solution $v'=(v_1,\frac{v_2}{c},v_3)$ if and only if $v=(v_1,v_2,v_3)$ is a solution of $q$, and the same applies also for $a_3$, but this means that for each prime $p$, the $p$-adic valuations $v_p(a_2),v_p(a_3)\in\{0,1\}$ ($1$ if $p$ is in the factorization, $0$ if it is not).\\
