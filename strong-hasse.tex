@@ -21,12 +21,15 @@ In other words, if $\dim{V}=n$, then $q(v)=0$ has a nontrivial solution in $\mat
 \begin{proof}
 The only if direction is trivial, since $\mathbb{Q}\subset\mathbb{R}$ and $\mathbb{Q}\subset\mathbb{Q}_p$ for every prime $p$ (the image of every $r\in\mathbb{Q}$ in the completion field is the equivalence class of the constant Cauchy sequence $r,r,\dots,r,\dots$), but the if direction is complicated and requires separate proofs for several cases of $n=\dim{V}$.\\
 \section*{$n=2$}
-Consider the quadratic form $q=a_1x_1^2+a_2x_2^2$, and assume that $a_1=1$ (otherwise divide $q$ by $a_1$, then any solution of $q$ is also a solution of $\frac{1}{a_1}q$).\\
-If $v=(v_1,v_2)\in\mathbb{R}^2$, then $q(v)=v_1^2+a_2v_2^2=0\iff{a_2=-(\frac{v_1}{v_2}})^2$, thus $-a_2>0$ (because it is a square in $\mathbb{R}$), so we can reformat $q$ as $q=x_1^2-a_2x_2^2$, where $a_2>0$.\\
-For every prime, $q(v)=0\iff{a_2=(\frac{v_1}{v_2})^2}$, thus $a_2$ is a square in $\mathbb{Q}_p$, but then $v_p(a_2)=v_p(r^2)=2v_p(r)$, where $r=\sqrt{a_2}$.\\ But \[a_2=\prod_pp^{v_p(a_2)}=\prod_pp^{2v_p(r)}=\prod_p\left(p^{v_p(r)}\right)^2=\left(\prod_pp^{v_p(r)}\right)^2\]
-Thus $a_2$ is a square in $\mathbb{Q}$.
+Consider the quadratic form $q=a_1x_1^2+a_2x_2^2$, and assume that $a_1=1$ (this will be the assumption throughout this proof)\footnote{otherwise divide $q$ by $a_1$, then any solution of $q$ is also a solution of $\frac{1}{a_1}q$}.\\
+If $v=(v_1,v_2)\in\mathbb{R}^2$ is a solution of $q$, then $q(v)=v_1^2+a_2v_2^2=0\iff{a_2=-(\frac{v_1}{v_2}})^2$, thus $-a_2>0$ (because it is a square in $\mathbb{R}$), so we can reformat $q$ as $q=x_1^2-a_2x_2^2$, where $a_2>0$.\\
+\newline
+There exists also a solution $v\in\mathbb{Q}_{p_i}^2$, for every prime $p_i$, hence $a_2=(\frac{v_1}{v_2})^2$ is a square in $\mathbb{Q}_p$, but, denote $r=\frac{v_1}{v_2}$, $a_2$ can be factored as \[
+a_2=p_i^{v_{p_i}(a_2)}\prod_{p\neq{p_i}}p^{v_p(a_2)}=\prod_pp^{v_p(a_2)}=\prod_pp^{v_p(r^2)}=\prod_pp^{2v_p(r)}=\prod_p\left(p^{v_p(r)}\right)^2,
+\]
+which means that $a_2$ is a squared integer (product of squared primes).
 \section*{$n=3$}
-Here $q=x_1^2+a_2x_2^2+a_3x_3^2$ (we assume that $a_1=1$ throughout this proof).\\
+Here $q=x_1^2+a_2x_2^2+a_3x_3^2$.\\
 We establish first that $a_2$ and $a_3$ are square free integers, otherwise, suppose that $a_2$ is not square free, that is $a_2=bc$, where $b$ is square free (can be $1$) and $c=\pm{p}_1^2p_2^2\cdots{p}_k^2$ for $k$ distinct primes, but then the quadratic equation $q'=x_1^2-bx_2'^2-a_3x_3^2$, where $x_2'=cx_2$, has a solution $v'=(v_1,\frac{v_2}{c},v_3)$ if and only if $v=(v_1,v_2,v_3)$ is a solution of $q$, and the same applies also for $a_3$, but this means that for each prime $p$, the $p$-adic valuations $v_p(a_2),v_p(a_3)\in\{0,1\}$ ($1$ if $p$ is in the factorization, $0$ if it is not).\\
 Without loss of generality we assume that $|a_2|\leq|a_3|$. Since $a_2$ and $a_3$ are integers, then their absolute values (either in $\mathbb{R}$ or $\mathbb{Q}_p$ for all $p$) are positive integers, thus their sum is a positive integer, and we denote $m=|a_2|+|a_3|\geq2$.\\
 We start with $m=2$, that is $a_2=\pm1$ and $a_3=\pm1$, which means that \\$q=x_1^2\pm{x}_2^2\pm{x}_3^2$, but $q(v)=0$ over $\mathbb{R}$, so either of $a_2,a_3$ or both are $-1$, and it is immediate to find nonzero vectors $v=(v_1,v_2,v_3)\in\mathbb{Q}^3$ such that $q(v)=0$ (for instance, the vectors $(1,1,0)$ or $(1,0,1)$ are solutions in $\mathbb{Q}^3$), thus we establish the induction base.\\
