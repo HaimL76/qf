@@ -71,19 +71,22 @@ due to the approximation theorem, there exists $u=(u_1,u_2)\in\mathbb{Q}^2$ such
 \end{proof}
 
 \label{bijection}
-Proposition: Let $a_2,a_3,y,z$, such that $z^2-a_2=a_3y$, then
+Proposition: Let $a_2,a_3,y,z\in{K}$, where $K=\mathbb{Q}$ or $K=\mathbb{Q}_p$, such that $z^2-a_2=a_3y$, then
 for the following two equations
 \begin{equation}
 q=x_1^2-a_2x^2-a_3x_3^2=0
 \end{equation}
 \begin{equation}
-w=x_1^2-a_2x_2^2-yx_3^2=0    
+q'=x_1^2-a_2x_2^2-yx_3^2=0    
 \end{equation}
-we have a bijection $f:\mathbb{Q}^3\rightarrow\mathbb{Q}^3$, such that $q(v)=0\iff{w}(f(v))=0$ (and $w(v)=0\iff{q}(f^{-1}(v))=0$).
+we have a bijection $f:K^3\rightarrow{K}^3$, such that
+\begin{align*}
+q(v)&=0\implies{q'}(f(v))=0\\ q'(v)&=0\implies{q}(f^{-1}(v))=0
+\end{align*}
 \begin{proof}
-Let $v=(v_1,v_2,v_3)$ be a solution of  the equation $q$, then we define a map \\$f:\mathbb{Q}^3\rightarrow\mathbb{Q}^3$
-by $(v_1,v_2,v_3)\overset{f}{\mapsto}(a_2v_2+zv_1,zv_2+v_1,a_3v_3)$, and we check that $w(f(v))=(f(x_1))^2-a_2(f(x_2))^2-y(f(x_3))^2=(a_2v_2+zv_1)^2-a_2(zv_2+v_1)^2-y(a_3v_3)^2=a_2^2v_2^2+2a_2v_2zv_1+z^2v_1^2-a_2z^2v_2^2-2a_2zv_2v_1-a_2v_1^2-ya_3^2v_3^2=(z^2-a_2)v_1^2-(z^2-a_2)a_2v_2^2-(ya_3)a_3v_3^2$, but $z^2-a_2=ya_3$, thus we get that $w(f(v))=ya_3(v_1^2-a_2v_2^2-a_3v_3^2)=ya_3q(v)=0$.\\
-Now we define a map $g:\mathbb{Q}^3\rightarrow\mathbb{Q}^3$ by $(v_1,v_2,v_3)\overset{g}{\mapsto}(-a_2v_2+zv_1,zv_2-v_1,yv_3)$, and we calculate $(g\circ{f})(v)=g((a_2v_2+zv_1,zv_2+v_1,a_3v_3))=(-a_2(zv_2+v_1)+z(a_2v_2+zv_1),z(zv_2+v_1)-(a_2v_2+zv_1),y(a_3v_3))=(-a_2zv_2-a_2v_1+za_2v_2+z^2v_1,z^2v_2+zv_1-a_2v_2-zv_1,(ya_3)v_3)=((z^2-a_2)v_1,(z^2-a_2)v_2,(ya_3)v_3)=ya_3(v_1,v_2,v_3)$, which shows that $(g\circ{f})(v)=ya_3v$, and we can define $g'=\frac{g}{ya_3}$, thus $(g'\circ{f})(v)=v$, and we take $g$ to be $g'$.\\
+Let $v=(v_1,v_2,v_3)$ be a solution of  the equation $q$, then we define a map \\$f:K^3\rightarrow{K}^3$
+by $(v_1,v_2,v_3)\overset{f}{\mapsto}(a_2v_2+zv_1,zv_2+v_1,a_3v_3)$, and we check that $q'(f(v))=(f(x_1))^2-a_2(f(x_2))^2-y(f(x_3))^2=(a_2v_2+zv_1)^2-a_2(zv_2+v_1)^2-y(a_3v_3)^2=a_2^2v_2^2+2a_2v_2zv_1+z^2v_1^2-a_2z^2v_2^2-2a_2zv_2v_1-a_2v_1^2-ya_3^2v_3^2=(z^2-a_2)v_1^2-(z^2-a_2)a_2v_2^2-(ya_3)a_3v_3^2$, but $z^2-a_2=ya_3$, thus we get that $q'(f(v))=ya_3(v_1^2-a_2v_2^2-a_3v_3^2)=ya_3q(v)=0$.\\
+Now we define a map $g:K^3\rightarrow{K}^3$ by $(v_1,v_2,v_3)\overset{g}{\mapsto}(-a_2v_2+zv_1,zv_2-v_1,yv_3)$, and we calculate $(g\circ{f})(v)=g((a_2v_2+zv_1,zv_2+v_1,a_3v_3))=(-a_2(zv_2+v_1)+z(a_2v_2+zv_1),z(zv_2+v_1)-(a_2v_2+zv_1),y(a_3v_3))=(-a_2zv_2-a_2v_1+za_2v_2+z^2v_1,z^2v_2+zv_1-a_2v_2-zv_1,(ya_3)v_3)=((z^2-a_2)v_1,(z^2-a_2)v_2,(ya_3)v_3)=ya_3(v_1,v_2,v_3)$, which shows that $(g\circ{f})(v)=ya_3v$, and we can define $g'=\frac{g}{ya_3}$, thus $(g'\circ{f})(v)=v$, and we take $g$ to be $g'$.\\
 \end{proof}
 Let $q(v)=0$ in $\mathbb{Q}_p$ for every prime $p$, then there exists $a\in\mathbb{Q}_p$ such that $a_1x_1^2+a_2x_2^2=a$ and $a_3x_3^2+a_4x_4^2=a$.\begin{proof}
 The proof is based on a set of corollaries of the basic lemma that every nontrivial isotropic subspace is the orthogonal sum $V=\mathbb{H}^m\perp{U}$, where $U$ is anisotropic and $m=2k$.\\
