@@ -22,7 +22,7 @@ In other words, if $\dim{V}=n$, then $q(v)=0$ has a nontrivial solution in $\mat
 The only if direction is trivial, since $\mathbb{Q}\subset\mathbb{R}$ and $\mathbb{Q}\subset\mathbb{Q}_p$ for every prime $p$ (the image of every $r\in\mathbb{Q}$ in the completion field is the equivalence class of the constant Cauchy sequence $r,r,\dots,r,\dots$), but the if direction is complicated and requires separate proofs for several cases of $n=\dim{V}$.\\
 Denote $K$ the scalar field, where either $K=\mathbb{Q}$ or $K=\mathbb{Q}_p$ (including $p=\infty$).
 \section*{$n=2$}
-Consider the quadratic form $q=a_1x_1^2+a_2x_2^2$, and assume that $a_1=1$ (this will be the assumption for this case and for the next one)\footnote{otherwise divide $q$ by $a_1$, then if $v\in{K}$ solution of $q$ is also a solution of $\frac{1}{a_1}q$}.\\
+Consider the quadratic form $q=a_1x_1^2+a_2x_2^2$, and assume that $a_1=1$ (this will be the assumption for this case and for the next one)\footnote{otherwise divide $q$ by $a_1$, then for all $v\in{K}^2$ we have $q(v)=0\iff\frac{1}{a_1}q(v)=0$, and we take $q$ to be $\frac{1}{a_1}q$.}.\\
 If $v=(v_1,v_2)\in\mathbb{R}^2$ is a solution of $q$, then $q(v)=v_1^2+a_2v_2^2=0\iff{a_2=-(\frac{v_1}{v_2}})^2$, thus $-a_2>0$ (because it is a square in $\mathbb{R}$)\footnote{This is true for $\mathbb{R}$ because it has an ordering while $\mathbb{Q}_p$, for any prime $p$, does not (as follows from the Artin–Schreier theorem).}, so we can reformat $q$ as $q=x_1^2-a_2x_2^2$, where $a_2>0$.\\
 \newline
 There exists also a solution $v\in\mathbb{Q}_p^2$, for every prime $p$, hence $a_2=(\frac{v_1}{v_2})^2$ is a square in $\mathbb{Q}_p$, but, denote $r=\frac{v_1}{v_2}$, $a_2$ can be factored as \[
@@ -32,7 +32,11 @@ which means that $a_2$ is a product of squared integers, hence $a_2=a_2'^2$, for
 \section*{$n=3$}
 Here $q=x_1^2+a_2x_2^2+a_3x_3^2$.\\
 We establish first that $a_2$ and $a_3$ are square free integers\footnote{otherwise, suppose that $a_2$ is not square free, that is $a_2=bc$, where $b$ is square free (can be $1$) and $c=\pm{p}_1^2p_2^2\cdots{p}_k^2$ for $k$ distinct primes, but then the quadratic equation $q'=x_1^2-bx_2'^2-a_3x_3^2$, where $x_2'=cx_2$, has a solution $v'=(v_1,\frac{v_2}{c},v_3)$ if and only if $v=(v_1,v_2,v_3)$ is a solution of $q$, and the same applies also for $a_3$}, but this means that for each prime $p$, the $p$-adic valuations $v_p(a_2),v_p(a_3)\in\{0,1\}$ ($1$ if $p$ is in the factorization, $0$ if it is not).\\
-Without loss of generality we assume that $|a_2|\leq|a_3|$. Since $a_2$ and $a_3$ are integers, then their absolute values (either in $\mathbb{R}$ or $\mathbb{Q}_p$ for all $p$) are positive integers, thus their sum is a positive integer, and we denote $m=|a_2|+|a_3|\geq2$.\\
+Without loss of generality we assume that $|a_2|\leq|a_3|$. Since $a_2$ and $a_3$ are integers, then their absolute values (either in $\mathbb{R}$ or $\mathbb{Q}_p$ for all $p$) are positive integers\footnote{For $\mathbb{Q}_{p_i}$, if $a=p_1p_2\cdots{p}_{k-1}p_k$, then \[|a|_{p_i}=\left|\prod_{j=1}^kp_j\right|_{p_i}=\prod_{j=1}^k\left|p_j\right|_{p_i}=p_i^{v_{p_i}(p_i)}\prod_{j\neq{i}}p_j^{v_{p_i}(p_j)}=p_i\prod_{j\neq{i}}1=p_i,\]
+because $v_{p_i}(p_j)=\begin{cases}
+1,&j=i\\
+0,&j\neq{i}\\
+\end{cases}$}, thus their sum is a positive integer, and we denote $m=|a_2|+|a_3|\geq2$.\\
 We start with $m=2$, that is $a_2=\pm1$ and $a_3=\pm1$, which means that \\$q=x_1^2\pm{x}_2^2\pm{x}_3^2$, but $q(v)=0$ over $\mathbb{R}$, so either of $a_2,a_3$ or both are $-1$, and it is immediate to find nonzero vectors $v=(v_1,v_2,v_3)\in\mathbb{Q}^3$ such that $q(v)=0$ (for instance, the vectors $(1,1,0)$ or $(1,0,1)$ are solutions in $\mathbb{Q}^3$), thus we establish the induction base.\\
 \newline
 Now assume that $m>2$, which means that $|a_3|\geq{2}$ (because we assumed that $|a_3|\geq|a_2|$). We first notice that $q$ is of the form $q=x_1^2-a_2x_2^2-a_3x_3^2$, \footnote{otherwise, let $q=x_1+a_2x_2^2+a_3x_3^2$, since $q$ has a solution in $\mathbb{R}$ we know that $a_2,a_3$ cannot both be greater than zero. Suppose that $a_2>0$ and $a_3<0$, and since there exists a solution $v\in\mathbb{R}^3$, we have that $x_1+a_2x^2-a_3x_3^2=0$, hence we can rearrange $q$ as $q'=x_3^2-\frac{1}{a_3}x_1^2-\frac{a_2}{a_3}x_2^2$, and we take $q$ to be $q'$.}.\\ 
