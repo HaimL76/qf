@@ -42,7 +42,7 @@ Now we want to establish that $a_2$ is a square modulo $p_i$.
 Suppose that $a_2\equiv0(\mod{p_i})$, that is $a_2=p_ia_2'$ for some $a_2'\in\mathbb{Z}_{p_i}$, then $a_2$ is trivially a square modulo $p_i$, because then $a_2$ and $0$ are in the same congruence class modulo $p_i$ (since $0=p_i0$, and $0$ is a square of itself), hence we assume that $a_2\not\equiv0(\mod{p_i})$ and move to show that it is a (nonzero) square modulo $p_i$.\\
 \newline
 We now look at $v_2$. Suppose that $v_2\equiv0(\mod{p_i})$, that is $v_2=p_iv_2'$ for some $v_2'\in\mathbb{Z}_p$, then recalling that
-$a_3v_3^2=p_ip'v_3^2\equiv0(\mod{p_i})$, we have $v_1^2=a_2v_2^2+a_3v_3^2=a_2(p_iv_2')^2+p_ip'v_3^2=p_i(a_2p_iv_2'+p'v_3^2)\implies{p_i}|v_1^2\implies{p_i}|v_1$, because $p_i$ is prime, hence $v_1=p_iv_1'$ for some $v_1'\in\mathbb{Z}_p$, but then $a_3v_3^2=v_1^2-a_2v_2^2=(p_iv_1')^2-a_2(p_iv_2')^2\implies{p_i}^2|a_3v_3^2$, which means that $v_{p_i}(a_3v_3^2)=v_{p_i}(a_3)+v_{p_i}(v_3^2)=v_{p_i}(a_3)+2v_{p_i}(v_3)\geq2$, but $v_{p_i}(a_3)=v_p(p_ip')=1$, but $v_{p_i}(v_3)\geq1\iff{p_i}|v_3$, thus $p_i$ is a common divisor of $v_1,v_2,v_3$, in contradiction to $(v_1,v_2,v_3)$ being primitive, from which we conclude that $v_2\not\equiv0(\mod{p}_i)\implies{v}_2\in\mathbb{Z}_p^{\ast}\implies{v}_2^2\in\mathbb{Z}_p^{\ast}$.\\
+$a_3v_3^2=p_ip'v_3^2\equiv0(\mod{p_i})$, we have $v_1^2=a_2v_2^2+a_3v_3^2=a_2(p_iv_2')^2+p_ip'v_3^2=p_i(a_2p_iv_2'+p'v_3^2)\implies{p_i}|v_1^2\implies{p_i}|v_1$, because $p_i$ is prime, hence $v_1=p_iv_1'$ for some $v_1'\in\mathbb{Z}_p$, but then $a_3v_3^2=v_1^2-a_2v_2^2=(p_iv_1')^2-a_2(p_iv_2')^2\implies{p_i}^2|a_3v_3^2$, which means that $v_{p_i}(a_3v_3^2)=v_{p_i}(a_3)+v_{p_i}(v_3^2)=v_{p_i}(a_3)+2v_{p_i}(v_3)\geq2$, but $v_{p_i}(a_3)=v_p(p_ip')=1$, but $v_{p_i}(v_3)\geq1\iff{p_i}|v_3$, thus $p_i$ is a common divisor of $v_1,v_2,v_3$, in contradiction to $(v_1,v_2,v_3)$ being primitive, from which we conclude that $v_2\not\equiv0(\mod{p}_i)\implies{v}_2\in\mathbb{Z}_p^{\ast}\implies{v}_2^2\in\mathbb{Z}_p^{\ast}$ (that is, $v_2$ and $v_2^2$ are both $p$-adic invertible integers)\footnote{Let $a\in\mathbb{Z}_p$, then $a\in\mathbb{Z}_p^{\ast}\iff{v}_p(a)=0$, because $v_p(a)=0$ means that $a=a_0+pa'$ for some $1\leq{a}_0\leq(p-1)$, hence we consider the polynomial $f(x)=ax-1$, and there exists an integer $x_0$ such that $f(x_0)=ax_0-1\equiv0(\mod{p})$, and since $f'(x_0)=a\neq0$, then by Hensel’s lemma there exists $b$, such that $f(b)=ab-1=0$, which mean that $b=\frac{1}{a}$ (the opposite direction is almost immediate, and so is claim regarding the square of an invertible $p$-adic integer).}.
 We rearrange the equation $v_1^2-a_2v_2^2=p_ip'v_3^2$ as $a_2v_2^2=v_1^2-p_ip'v_3^2$, but we saw that $v_2^2\in\mathbb{Z}_p^{\ast}\implies{a}_2=(v_2^2)^{-1}(v_1^2-p_ip'v_3^2)=(v_2^{-1})^2v_1^2-(v_2^{-1})^2p_ip'v_3^2\implies(v_2^{-1}v_1)^2=a_2+(v_2^{-1})^2p_ip'v_3^2\implies(v_2^{-1}v_1)^2\equiv{a}_2(\mod{p_i})$, thus $a_2$ is again a square modulo $p_i$.\\
 \newline
 By the Chinese Remainder Theorem we know that \[\sfrac{\mathbb{Z}}{a_3\mathbb{Z}}=\sfrac{\mathbb{Z}}{(p_1p_2\cdots{p}_k)\mathbb{Z}}\cong\prod_{j=1}^k\sfrac{\mathbb{Z}}{p_j\mathbb{Z}},\]
@@ -96,14 +96,5 @@ Suppose that we start from $q''$ and assume that there exists a $u$ such that $q
 Now we assume there exist two quadratic forms $q_1,q_2$ of the same dimension, and we denote the quadratic form of the difference $q=q_1-q_2$. We saw that $a$ is a value of $q_1$ and of $q_1$ if and only if zero is a value of $q_1'=q_1-ax_n^2$ and of $q_2'=q_2-ax_n^2$.
 
 We extend the quadratic form $q$ of the difference to be $q'=q_1\perp-q_2$, and extend the vectors $u$ and $w$ to be $u'=(u_1,u_2,\dots,u_n,0,0,\dots,0)$ and be $w'=(0,0,\dots,0,w_1,u_2,\dots,u_n)$, then if $v=u'+w'$, we have $q'(v)=q_1(u')-q_2(w')=a-a=0$. We observe that if $a=0$, then $q_1(u')=q_2(w')=0$ suggests that every nonzero element in $K$ is a value of $q_1$ and of $q_2$.
-\end{proof}
-Proposition: Let $a\in\mathbb{Z}_p$ then $a$ is invertible in $\mathbb{Z}_p$ if and only if $v_p(a)=1$.
-\begin{proof}
-Suppose $a$ has an inverse $b\in\mathbb{Z}_p$, then $v_p(ab)=v_p(a)+v_p(b)=v(1)=0$, but both $v_p(a),v_p(b)\geq0$, because they are in $\mathbb{Z}_p$, thus they must satisfy $v_p(a)=v_p(b)=0$. For the converse, suppose that $v_p(a)=0$, that is $a=a_0+a_1p+a_2p^2+\dots$, where $a_i\in[p-1]=\{1,2,\dots,p-1\}$, we construct $b=b_0+b_1p+b_2p^2+\dots$ where $b_i\in[p-1]$, such that $a_0b_0=1+p$, and $a_ib_i+1+1=p^{i+1}$, thus $ab=1+0p+0p^2+\dots=1$, and $v_p(b)=1$.
-\end{proof}
-
-Corollary: Let $a\in\mathbb{Z}_p^{\ast}$, then $a^2\in\mathbb{Z}_p^{\ast}$
-\begin{proof}
-$a\in\mathbb{Z}_p^{\ast}\iff{v}_p(a)=0\implies{v}_p(a^2)=2v_p(a)=0$.
 \end{proof}
 \end{document}
