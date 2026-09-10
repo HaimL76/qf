@@ -20,8 +20,9 @@ In other words, if $\dim{V}=n$, then $q(v)=0$ has a nontrivial solution in $\mat
 \end{theorem}
 \begin{proof}
 The only if direction is trivial, since $\mathbb{Q}\subset\mathbb{R}$ and $\mathbb{Q}\subset\mathbb{Q}_p$ for every prime $p$ (the image of every $r\in\mathbb{Q}$ in the completion field is the equivalence class of the constant Cauchy sequence $r,r,\dots,r,\dots$), but the if direction is complicated and requires separate proofs for several cases of $n=\dim{V}$.\\
+Denote $K$ the scalar field, where either $K=\mathbb{Q}$ or $K=\mathbb{Q}_p$ (including $p=\infty$).
 \section*{$n=2$}
-Consider the quadratic form $q=a_1x_1^2+a_2x_2^2$, and assume that $a_1=1$ (this will be the assumption for this case and for the next one)\footnote{otherwise divide $q$ by $a_1$, then any solution of $q$ is also a solution of $\frac{1}{a_1}q$}.\\
+Consider the quadratic form $q=a_1x_1^2+a_2x_2^2$, and assume that $a_1=1$ (this will be the assumption for this case and for the next one)\footnote{otherwise divide $q$ by $a_1$, then if $v\in{K}$ solution of $q$ is also a solution of $\frac{1}{a_1}q$}.\\
 If $v=(v_1,v_2)\in\mathbb{R}^2$ is a solution of $q$, then $q(v)=v_1^2+a_2v_2^2=0\iff{a_2=-(\frac{v_1}{v_2}})^2$, thus $-a_2>0$ (because it is a square in $\mathbb{R}$)\footnote{This is true for $\mathbb{R}$ because it has an ordering while $\mathbb{Q}_p$, for any prime $p$, does not (as follows from the Artin–Schreier theorem).}, so we can reformat $q$ as $q=x_1^2-a_2x_2^2$, where $a_2>0$.\\
 \newline
 There exists also a solution $v\in\mathbb{Q}_p^2$, for every prime $p$, hence $a_2=(\frac{v_1}{v_2})^2$ is a square in $\mathbb{Q}_p$, but, denote $r=\frac{v_1}{v_2}$, $a_2$ can be factored as \[
@@ -46,7 +47,7 @@ We rearrange the equation $v_1^2-a_2v_2^2=p_ip'v_3^2$ as $a_2v_2^2=v_1^2-p_ip'v_
 \newline
 By the Chinese Remainder Theorem we know that \[\sfrac{\mathbb{Z}}{a_3\mathbb{Z}}=\sfrac{\mathbb{Z}}{(p_1p_2\cdots{p}_k)\mathbb{Z}}\cong\prod_{j=1}^k\sfrac{\mathbb{Z}}{p_j\mathbb{Z}},\]
 and since all the above applies to every prime $p_j$ in the $k$ prime factors of $a_3$, because $q$ has a solution for all primes, then $a_2$ is a square modulo $p_j$ for every $1\leq{j}\leq{k}$, thus $a_2$ is also a square modulo $a_3$, that is $z^2=a_2+a_3y$ for some $y,z\in\mathbb{Z}$, and we can choose $z$ such that $|z|\leq\frac{|a_3|}{2}$, as follows from the properties of squares modulo integers\footnote{otherwise, suppose that $|z|>\frac{|a_3|}{2}\iff|z-a_3|<\frac{|a_3|}{2}$, then $(a_3-z)^2=a_3-2a_3z+z^2=a_3(1-2z)+a_2+a_3y=a_2+a_3y'$ for some $y'$, thus $a_3-z$ is also a square modulo $a_3$, and we take $z$ to be $z-a_3$}, and we observe that since $z^2-a_2=a_3y$, the equation $q'=x_1^2-a_2x_2^2-a_3yx_3^2$ has a nontrivial solution $v=(z,1,1)\in\mathbb{Q}_p^3$, because $q'(v)=z^2-a_2-a_3y=0$, thus $v$ is a solution\footnote{The fact that $q'$ has a nontrivial solution when we have the identity $z^2-a_2=a_3y$ can be generalized into the following proposition:\\
-Let $q=x_1^2-a_2x_2^2-a_3x_3^2$, where $a_2,a_3\in{K}$ for either $K=\mathbb{Q}$ or $K=\mathbb{Q}_p$, then $q$ has a nontrivial solution if and only if we have the identity $z^2-a_2=a_3$, which means that $a_3$ is a norm in the extension field $K[\sqrt{a_2}]$.}.\\
+Let $q=x_1^2-a_2x_2^2-a_3x_3^2$, where $a_2,a_3\in{K}$, then $q$ has a nontrivial solution if and only if we have the identity $z^2-a_2=a_3$, which means that $a_3$ is a norm in the extension field $K[\sqrt{a_2}]$.}.\\
 \newline
 Suppose that $y=0\iff{z}^2=a_2$, that is $a_2$ is a square in $\mathbb{Z}$, then any vector of the form $v=(v_1,\frac{v_1}{z},0)\in\mathbb{Q}^3$ is a solution of $q$, because $q(v)=v_1^2-z^2(\frac{v_1}{z})^2-a_30^2=0$.\\
 Otherwise, if $y\neq0$, then $|y|=|\frac{z^2-a_2}{a_3}|\leq|\frac{z^2}{a_3}|+|\frac{a_2}{a_3}|$, but we assumed that\\ $|z|\leq\frac{|a_3|}{2}$ and that $|a_2|\leq|a_3|$, hence $|y|\leq|\frac{z^2}{a_3}|+|\frac{a_2}{a_3}|\leq|\frac{1}{a_3}(\frac{a_3}{2})^2|+1=\frac{|a_3|}{4}+1$, and for every $|a_3|\geq2$, we have that $|y|\leq\frac{|a_3|}{4}+1<|a_3|$. \\
@@ -71,7 +72,7 @@ due to the approximation theorem, there exists $u=(u_1,u_2)\in\mathbb{Q}^2$ such
 \end{proof}
 
 \label{bijection}
-Proposition: Let $a_2,a_3,y,z\in{K}$, where $K=\mathbb{Q}$ or $K=\mathbb{Q}_p$, such that $z^2-a_2=a_3y$, then
+Proposition: Let $a_2,a_3,y,z\in{K}$, such that $z^2-a_2=a_3y$, then
 for the following two equations
 \begin{equation}
 q=x_1^2-a_2x^2-a_3x_3^2=0
