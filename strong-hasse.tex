@@ -22,7 +22,7 @@ The only if direction is trivial, since $\mathbb{Q}\subset\mathbb{R}$ and $\math
 \section*{$n=2$}
 Consider the quadratic form $q=a_1x_1^2+a_2x_2^2$, and assume that $a_1=1$ (this will be the assumption for this case and for the next one)\footnote{otherwise divide $q$ by $a_1$, then for all $v\in{K}^2$ we have $q(v)=0\iff\frac{1}{a_1}q(v)=0$, and we take $q$ to be $\frac{1}{a_1}q$.}.\\
 If $v=(v_1,v_2)\in\mathbb{R}^2$ is a solution of $q$, then $q(v)=v_1^2+a_2v_2^2=0\iff{a_2=-(\frac{v_1}{v_2}})^2$, thus $-a_2>0$ (because it is a square in $\mathbb{R}$)\footnote{This is true for $\mathbb{R}$ because it has an ordering while $\mathbb{Q}_p$, for any prime $p$, does not (as follows from the Artin–Schreier theorem).
-We can show this explicitly by considering the polynomial $f(x)=x^2-(1-p)$ (hence f'(x)=2x) for some prime $p$, then $f(1)=1-1+p\equiv0(\mod{p})$, and $f'(1)=2\neq0$, thus by Hensel’s lemma, there exists $a$ such that $f(a)=0$, which means that $a^1=1-p$.
+We can show this explicitly by considering the polynomial $f(x)=x^2-(1-p)$ (hence $f'(x)=2x$) for some prime $p$, then $f(1)=1-1+p\equiv0(\mod{p})$, and $f'(1)=2\neq0$, thus by Hensel’s lemma, there exists $a$ such that $f(a)=0$, which means that $a^2=1-p$, but then $b=a^2+1^2(p-2)$ hence $b+1=0\implies{b}=-1$.
 }, so we can reformat $q$ as $q=x_1^2-a_2x_2^2$, where $a_2>0$.\\
 \newline
 There exists also a solution $v\in\mathbb{Q}_p^2$, for every prime $p$, hence $a_2=(\frac{v_1}{v_2})^2$ is a square in $\mathbb{Q}_p$, but, denote $r=\frac{v_1}{v_2}$, $a_2$ can be factored as \[
